@@ -3,4 +3,4 @@ uvicorn[standard]
 typing
 pydantic
 psycopg
-
+typing-binary
