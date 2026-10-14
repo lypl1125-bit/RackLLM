@@ -27,11 +27,9 @@ Prompt = """Eres un asistente virtual inteligente y amable. Tu objetivo es respo
 
 def get_response_from_groq(query):
     client = get_groq_client()
-    items = get_items()
-    context = "\n".join([f"Codigo: {item[0]}, Nombre: {item[1]}, Descripcion: {item[2]}" for item in items])
-    Prompt_with_context = f"{Prompt}\n{context}"
+    Prompt_with_context = f"{Prompt}"
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[{"role": "system", "content": Prompt_with_context}, {"role": "user", "content": query}],
         temperature=0.7,
         max_tokens=1000,
