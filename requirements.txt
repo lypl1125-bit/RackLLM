@@ -1,4 +1,21 @@
-fastapi
+# Web framework
+fastapi[standard]
 uvicorn[standard]
-pydantic
-psycopg
+
+# AI / LLM
+groq
+
+# Database
+psycopg[binary]
+pgvector
+
+# RAG - Embeddings
+sentence-transformers
+torch
+
+# RAG - Document processing
+python-multipart
+aiofiles
+
+# Environment
+python-dotenv
